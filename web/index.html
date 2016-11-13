@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Tesis</title>
+        <!-- Google Fonts -->
+        <!--<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>-->
+        <link rel="stylesheet" href="css/animate.css">
+        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+        <script src="js/funciones.js" type="text/javascript"></script>
+        
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+       
+    </head>
+    <body onload="$('#preloader').hide();">
+        <div class="container">
+            <div class="top">
+                <h1 id="title" class="hidden"><span id="logo">¡Leer es Genial! <span>y Gratis!</span></span></h1>
+                <h3 style="padding-left: 10%;padding-right: 10%;color: #FFFFFF" class="text-justify text-muted">
+                    Leer es genial! es una aplicacion que te permite leer libros de manera gratuita, calificarlas
+                    y ver un pequeño resumen y datos importantes. Además, la aplicación te ofrecerá recomendaciones
+                    de libros que te gustarán, en base a los gustos de tus amigos. Solo necesitas registrarse y listo.
+                </h3> 
+            </div>
+            <div class="login-box animated fadeInUp">
+                <div class="box-header">
+                    <h2>Log In</h2>
+                </div>                   
+                <label for="username">Username</label>
+                <br/>
+                <input type="text" id="username">
+                <br/>
+                <label for="password">Password</label>
+                <br/>
+                <input type="password" id="clave">
+                <br/>
+                <input type="button" onclick="flogin()" value="Ingresar">
+                <!--<button type="submit">Sign In</button>-->
+                <br/>
+                <a href="signup.html"><p class="small">Registrate aqui</p></a>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function () {
+            $('#logo').addClass('animated fadeInDown');
+            $("input:text:visible:first").focus();
+        });
+        $('#username').focus(function () {
+            $('label[for="username"]').addClass('selected');
+        });
+        $('#username').blur(function () {
+            $('label[for="username"]').removeClass('selected');
+        });
+        $('#password').focus(function () {
+            $('label[for="password"]').addClass('selected');
+        });
+        $('#password').blur(function () {
+            $('label[for="password"]').removeClass('selected');
+        });
+    </script>
+
+</html>
